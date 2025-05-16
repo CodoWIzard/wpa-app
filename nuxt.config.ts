@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   pwa: {
     registerType: "autoUpdate",
     manifest: {
-      name: "My Nuxt App",
-      short_name: "NuxtApp",
+      name: "My PWA",
+      short_name: "MyPWA",
       start_url: "/",
       display: "standalone",
       background_color: "#ffffff",
