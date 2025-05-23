@@ -1,5 +1,5 @@
 <script setup>
-//import { useHead, useColorMode } from "#imports";
+import { useHead, useColorMode } from "#imports";
 import { computed } from "vue";
 
 useHead({
