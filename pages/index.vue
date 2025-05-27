@@ -2,31 +2,58 @@
   <main class="w-full">
     <!-- Hero Section: full screen height on desktop -->
     <section
-      class="bg-red-600 text-white min-h-screen flex items-center justify-center text-center px-4 py-20"
+      class="relative overflow-hidden bg-gradient-to-br from-red-600 via-pink-500 to-red-700 text-white min-h-screen flex items-center justify-center text-center px-4 py-20"
     >
-      <div class="max-w-3xl">
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">
+      <!-- Floating hearts / particles (optional) -->
+      <div
+        class="absolute inset-0 z-0 pointer-events-none animate-pulse"
+        style="background: url('/hearts.svg') repeat; opacity: 0.05"
+      ></div>
+
+      <!-- Main content -->
+      <div class="relative z-10 max-w-3xl">
+        <h1
+          class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg"
+        >
           ❤️U Festival
         </h1>
-        <p class="text-base sm:text-xl mb-6">
-          Vier liefde, kunst & duurzaamheid — Utrecht · 15 & 16 augustus 2026
+        <p class="text-base sm:text-xl mb-2 italic text-red-100">
+          “Vier de liefde, kunst & duurzaamheid”
+        </p>
+        <p class="text-base sm:text-lg mb-6">
+          Utrecht · 15 & 16 augustus 2026 · Stad & Natuur
         </p>
         <div
           class="flex flex-col sm:flex-row justify-center items-center gap-4"
         >
           <NuxtLink
             to="/program"
-            class="bg-white text-red-600 px-6 py-3 rounded font-semibold hover:bg-gray-100 transition"
+            class="bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow"
           >
             Bekijk Programma
           </NuxtLink>
           <NuxtLink
             to="/tickets"
-            class="border border-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-red-600 transition"
+            class="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-600 transition shadow"
           >
             Koop Tickets
           </NuxtLink>
         </div>
+      </div>
+
+      <!-- Decorative SVG shape (optional) -->
+      <div class="absolute bottom-0 w-full">
+        <svg
+          class="w-full"
+          viewBox="0 0 1440 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="white"
+            d="M0,64 C480,160 960,0 1440,96 L1440,320 L0,320 Z"
+          ></path>
+        </svg>
       </div>
     </section>
 

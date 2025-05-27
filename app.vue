@@ -32,6 +32,13 @@ const toggleDarkMode = () => {
         <div>
           <h1 class="text-2xl font-bold">❤️U Festival</h1>
           <p class="text-xs sm:text-sm">Utrecht · 15 & 16 augustus 2026</p>
+          <div class="px-4 py-2 flex justify-around sm:justify-between">
+            <NuxtLink to="/" class="nav-link">🏠 Home</NuxtLink>
+            <NuxtLink to="/program" class="nav-link">🎶 Programme</NuxtLink>
+            <NuxtLink to="/map" class="nav-link">🗺️ Map</NuxtLink>
+            <NuxtLink to="/connect" class="nav-link">💬 Q&A</NuxtLink>
+            <NuxtLink to="/qr" class="nav-link">📷 QR Scan</NuxtLink>
+          </div>
         </div>
         <button @click="toggleDarkMode" class="text-sm hover:opacity-80">
           {{ isDark ? "🌙" : "☀️" }}
@@ -41,16 +48,8 @@ const toggleDarkMode = () => {
 
     <!-- Nav -->
     <nav
-      class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700"
-    >
-      <div class="px-4 py-2 flex justify-around sm:justify-between">
-        <NuxtLink to="/" class="nav-link">🏠 Home</NuxtLink>
-        <NuxtLink to="/program" class="nav-link">🎶 Programme</NuxtLink>
-        <NuxtLink to="/map" class="nav-link">🗺️ Map</NuxtLink>
-        <NuxtLink to="/connect" class="nav-link">💬 Q&A</NuxtLink>
-        <NuxtLink to="/qr" class="nav-link">📷 QR Scan</NuxtLink>
-      </div>
-    </nav>
+      class="bg-white dark:bg-gray-800 border-b-4 border-gray-200 dark:border-gray-700"
+    ></nav>
 
     <!-- Main content -->
     <main class="flex-1">
