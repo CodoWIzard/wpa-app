@@ -93,7 +93,9 @@
     </section>
 
     <!-- Call To Action -->
-    <section class="bg-red-600 text-white py-16 px-4 text-center">
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-red-600 via-pink-500 to-red-700 text-white flex items-center justify-center text-center px-4 py-20"
+    >
       <div class="max-w-screen-md mx-auto">
         <h2 class="text-3xl font-bold mb-4">Sluit je aan bij de beweging ❤️</h2>
         <p class="mb-6">15 & 16 augustus 2026 in het hart van Utrecht</p>

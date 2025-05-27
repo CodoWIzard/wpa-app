@@ -1,120 +1,155 @@
 <template>
   <main class="w-full">
-    <section class="py-20 px-4 bg-white text-gray-800">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl font-bold text-red-600 mb-10 text-center">
-          Festival Informatie ❤️U
+    <!-- Hero / Top Section -->
+    <section
+      class="py-24 px-4 bg-gradient-to-br from-red-600 to-pink-500 text-white text-center shadow-lg"
+    >
+      <div class="max-w-3xl mx-auto space-y-4">
+        <h1 class="text-5xl font-bold tracking-tight">
+          ❤️U Festival Informatie
         </h1>
+        <p class="text-lg opacity-90">
+          Alles wat je moet weten voor een geweldige festivaldag in Utrecht!
+        </p>
+      </div>
+    </section>
 
+    <!-- Info Sections -->
+    <section
+      class="py-16 px-4 bg-white dark:bg-zinc-900 text-gray-800 dark:text-white"
+    >
+      <div class="max-w-4xl mx-auto space-y-12">
         <!-- Algemeen & Contact -->
-        <QnASection title="📍 Algemeen & Contact">
-          <div class="space-y-4">
-            <p>
-              Het ❤️U Festival is voor (nieuwe) studenten in de regio Utrecht en
-              is een aanvulling op UIT.
-            </p>
-            <div>
-              <h4 class="font-semibold">📌 Adres:</h4>
-              <p>
-                Locatie: Strijkviertel, Utrecht<br />Navigatieadres:
-                Strijkviertelweg, Utrecht
-              </p>
-            </div>
-            <div>
-              <h4 class="font-semibold">🗓️ Datum & Openingstijden:</h4>
-              <p>Zaterdag 6 september 2025 - 12:00 tot 23:00 uur</p>
-            </div>
+        <InfoCard icon="📍" title="Algemeen & Contact">
+          <p>
+            Het ❤️U Festival is voor (nieuwe) studenten in de regio Utrecht en
+            is een aanvulling op UIT.
+          </p>
+          <div class="mt-4 space-y-2">
+            <InfoRow label="📌 Adres">
+              Locatie: Strijkviertel, Utrecht<br />
+              Navigatieadres: Strijkviertelweg, Utrecht
+            </InfoRow>
+            <InfoRow label="🗓️ Datum & Tijd">
+              Zaterdag 6 september 2025 — 12:00 tot 23:00
+            </InfoRow>
           </div>
-        </QnASection>
+        </InfoCard>
 
         <!-- Bereikbaarheid -->
-        <QnASection title="🚗 Bereikbaarheid">
-          <div class="space-y-4">
-            <div>
-              <h4 class="font-semibold">🚲 Fiets:</h4>
-              <p>
-                Er is een grote gratis fietsenstalling aanwezig waar je jouw
-                fiets de gehele dag kunt stallen.
-              </p>
-            </div>
-            <div>
-              <h4 class="font-semibold">🚘 Auto:</h4>
-              <p>
-                Parkingticket nodig. Parkeer op P+R Papendorp (volg borden ‘P
-                online ticket’).
-                <br />Geen ticket? Koop er één bij de parkeerwachter (PIN ONLY).
-                VOL = VOL.
-              </p>
-            </div>
-            <div>
-              <h4 class="font-semibold">🚌 OV:</h4>
-              <p>
-                Plan je reis via
-                <a
-                  href="https://9292.nl"
-                  class="text-red-600 underline"
-                  target="_blank"
-                  >9292.nl</a
-                >
-              </p>
-            </div>
-            <div>
-              <h4 class="font-semibold">🚌 Shuttlebus:</h4>
-              <p>
-                Vanaf Utrecht Centraal gratis shuttlebus naar het terrein.<br />
-                Vertrek: 12:00 - 19:00. Retour: vanaf 21:00.<br />
-                Vertrekpunt: Mineurslaan, volg bordjes ‘❤️U Festival’.
-              </p>
-            </div>
-            <div>
-              <h4 class="font-semibold">🚖 Taxi & Kiss & Ride:</h4>
-              <p>
-                Navigeer naar Strijkviertel, De Meern en volg de borden “Kiss &
-                Ride ❤️U Festival”.
-              </p>
-            </div>
-          </div>
-        </QnASection>
+        <InfoCard icon="🚗" title="Bereikbaarheid">
+          <InfoRow label="🚲 Fiets">
+            Gratis fietsenstalling op het terrein.
+          </InfoRow>
+          <InfoRow label="🚘 Auto">
+            Parkeerticket nodig via P+R Papendorp. Koop er een of betaal bij de
+            parkeerwachter (PIN ONLY). VOL = VOL.
+          </InfoRow>
+          <InfoRow label="🚌 OV">
+            Plan je reis via
+            <a
+              href="https://9292.nl"
+              class="text-red-600 underline"
+              target="_blank"
+              >9292.nl</a
+            >
+          </InfoRow>
+          <InfoRow label="🚌 Shuttlebus">
+            Gratis vanaf Utrecht Centraal.<br />
+            Heen: 12:00 - 19:00 · Terug: vanaf 21:00<br />
+            Vertrekpunt: Mineurslaan
+          </InfoRow>
+          <InfoRow label="🚖 Taxi & Kiss & Ride">
+            Navigeer naar Strijkviertel, De Meern en volg de borden “Kiss & Ride
+            ❤️U Festival”.
+          </InfoRow>
+        </InfoCard>
 
         <!-- Lockers -->
-        <QnASection title="🔒 Lockers">
-          <div class="space-y-2">
-            <p>
-              Op het terrein zijn kluisjes aanwezig (3-4 jassen per stuk).
-              <br />Je kunt deze onbeperkt openen/sluiten. <br />Online
-              reserveren is niet mogelijk.
-            </p>
-          </div>
-        </QnASection>
+        <InfoCard icon="🔒" title="Lockers">
+          <p>
+            Lockers voor 3-4 jassen. Onbeperkt openen/sluiten. Online reserveren
+            niet mogelijk.
+          </p>
+        </InfoCard>
 
         <!-- FAQ -->
-        <QnASection title="❓ FAQ">
+        <InfoCard icon="❓" title="Veelgestelde Vragen">
           <FaqItem
             question="Ik gebruik medicatie. Wat nu?"
-            answer="Je mag medicatie meenemen voor 1 dag mits je een doktersverklaring/medicatiepaspoort toont. EHBO kan medicatie bewaren indien nodig."
+            answer="Toegestaan voor 1 dag mits je een doktersverklaring hebt. EHBO kan helpen met opslag."
           />
           <FaqItem
-            question="Mag ik het festivalterrein tussentijds verlaten?"
-            answer="Nee, om veiligheidsredenen kun je het terrein niet verlaten en opnieuw betreden. Er zijn voldoende loungeplekken en eet/drinkopties."
+            question="Mag ik tussendoor weg van het terrein?"
+            answer="Nee, herintreden is niet mogelijk. Blijf genieten op locatie!"
           />
           <FaqItem
             question="Zijn er lockers?"
-            answer="Ja, er zijn medium en grote lockers te huur op het terrein."
+            answer="Ja! Medium & grote lockers aanwezig."
           />
-        </QnASection>
+        </InfoCard>
 
-        <!-- Golden-GLU -->
-        <QnASection title="🌟 Golden-GLU">
-          <div class="space-y-2">
-            <p>
-              Studenten van het GLU met een gouden armbandje hebben toegang tot
-              gouden toiletten en speciale barpunten zonder wachtrij.
-            </p>
-          </div>
-        </QnASection>
+        <!-- Golden GLU -->
+        <InfoCard icon="🌟" title="Golden-GLU">
+          <p>
+            GLU-studenten met gouden armbandje krijgen toegang tot gouden
+            toiletten en VIP-bars zonder wachtrijen.
+          </p>
+        </InfoCard>
       </div>
     </section>
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+// Components will be defined below
+</script>
+
+<!-- Reusable InfoCard & Row -->
+<script>
+export default {
+  components: {
+    InfoCard: {
+      props: ["title", "icon"],
+      template: `
+        <div class="bg-white/90 dark:bg-zinc-800 rounded-2xl p-6 shadow-md border border-gray-100 dark:border-zinc-700">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-2xl">{{ icon }}</span>
+            <h2 class="text-xl font-semibold">{{ title }}</h2>
+          </div>
+          <div><slot /></div>
+        </div>
+      `,
+    },
+    InfoRow: {
+      props: ["label"],
+      template: `
+        <div>
+          <h4 class="font-semibold mb-1">{{ label }}</h4>
+          <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300"><slot /></p>
+        </div>
+      `,
+    },
+    FaqItem: {
+      props: ["question", "answer"],
+      data() {
+        return { open: false };
+      },
+      template: `
+        <div class="border-t py-4">
+          <button
+            @click="open = !open"
+            class="flex items-center justify-between w-full text-left font-medium"
+          >
+            <span>{{ question }}</span>
+            <span>{{ open ? '−' : '+' }}</span>
+          </button>
+          <div v-if="open" class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+            {{ answer }}
+          </div>
+        </div>
+      `,
+    },
+  },
+};
+</script>

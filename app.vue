@@ -41,11 +41,11 @@ const toggleDarkMode = () => {
         <nav
           class="flex flex-wrap justify-center sm:justify-end gap-3 text-sm font-medium"
         >
-          <NuxtLink to="/" class="nav-link">🏠 Home</NuxtLink>
-          <NuxtLink to="/program" class="nav-link">🎶 Programme</NuxtLink>
-          <NuxtLink to="/map" class="nav-link">🗺️ Map</NuxtLink>
-          <NuxtLink to="/connect" class="nav-link">💬 Q&A</NuxtLink>
-          <NuxtLink to="/qr" class="nav-link">📷 QR Scan</NuxtLink>
+          <NuxtLink to="/" class="nav-link">Home</NuxtLink>
+          <NuxtLink to="/program" class="nav-link">Programme</NuxtLink>
+          <NuxtLink to="/map" class="nav-link">Map</NuxtLink>
+          <NuxtLink to="/connect" class="nav-link">Information</NuxtLink>
+          <NuxtLink to="/qr" class="nav-link">QR Scan</NuxtLink>
           <button
             @click="toggleDarkMode"
             class="ml-2 transition-opacity hover:opacity-80"
@@ -68,7 +68,7 @@ const toggleDarkMode = () => {
 
     <!-- Footer -->
     <footer
-      class="bg-gray-100 dark:bg-gray-800 text-center text-xs sm:text-sm p-4 text-gray-500 dark:text-gray-400"
+      class="bg-gray-100 dark:bg-black text-center text-xs sm:text-sm p-4 text-gray-500 dark:text-white"
     >
       &copy; 2026 ❤️U Festival · Gemeente Utrecht & Partners · App v1.0
     </footer>
