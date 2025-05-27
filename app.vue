@@ -50,7 +50,7 @@ const toggleDarkMode = () => {
             @click="toggleDarkMode"
             class="ml-2 transition-opacity hover:opacity-80"
           >
-            {{ isDark ? "🌙" : "☀️" }}
+            {{ isDark ? "🌙" : "💡" }}
           </button>
         </nav>
       </div>
