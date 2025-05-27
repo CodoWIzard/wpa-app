@@ -27,22 +27,32 @@ const toggleDarkMode = () => {
     class="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans"
   >
     <!-- Top -->
-    <header class="bg-red-600 text-white px-4 py-3 shadow-md">
-      <div class="flex items-center justify-between">
+    <header
+      class="bg-red-600/90 dark:bg-black/70 backdrop-blur-md text-white px-4 py-4 shadow-md sticky top-0 z-50"
+    >
+      <div
+        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
+      >
         <div>
           <h1 class="text-2xl font-bold">❤️U Festival</h1>
-          <p class="text-xs sm:text-sm">Utrecht · 15 & 16 augustus 2026</p>
-          <div class="px-4 py-2 flex justify-around sm:justify-between">
-            <NuxtLink to="/" class="nav-link">🏠 Home</NuxtLink>
-            <NuxtLink to="/program" class="nav-link">🎶 Programme</NuxtLink>
-            <NuxtLink to="/map" class="nav-link">🗺️ Map</NuxtLink>
-            <NuxtLink to="/connect" class="nav-link">💬 Q&A</NuxtLink>
-            <NuxtLink to="/qr" class="nav-link">📷 QR Scan</NuxtLink>
-          </div>
+          <p class="text-sm text-white/80">Utrecht · 15 & 16 augustus 2026</p>
         </div>
-        <button @click="toggleDarkMode" class="text-sm hover:opacity-80">
-          {{ isDark ? "🌙" : "☀️" }}
-        </button>
+
+        <nav
+          class="flex flex-wrap justify-center sm:justify-end gap-3 text-sm font-medium"
+        >
+          <NuxtLink to="/" class="nav-link">🏠 Home</NuxtLink>
+          <NuxtLink to="/program" class="nav-link">🎶 Programme</NuxtLink>
+          <NuxtLink to="/map" class="nav-link">🗺️ Map</NuxtLink>
+          <NuxtLink to="/connect" class="nav-link">💬 Q&A</NuxtLink>
+          <NuxtLink to="/qr" class="nav-link">📷 QR Scan</NuxtLink>
+          <button
+            @click="toggleDarkMode"
+            class="ml-2 transition-opacity hover:opacity-80"
+          >
+            {{ isDark ? "🌙" : "☀️" }}
+          </button>
+        </nav>
       </div>
     </header>
 
