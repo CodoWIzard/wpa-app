@@ -14,5 +14,5 @@
 <script setup>
 import QrcodeVue from "qrcode.vue";
 
-const appUrl = "https://u-festival.app"; // Replace with your real domain
+const appUrl = "https://wpa-app.vercel.app/";
 </script>
