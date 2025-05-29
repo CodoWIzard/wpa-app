@@ -4,12 +4,6 @@
     <section
       class="relative overflow-hidden bg-gradient-to-br from-red-600 via-pink-500 to-red-700 text-white min-h-screen flex items-center justify-center text-center px-4 py-20"
     >
-      <!-- Floating hearts / particles (optional) -->
-      <div
-        class="absolute inset-0 z-0 pointer-events-none animate-pulse"
-        style="background: url('/hearts.svg') repeat; opacity: 0.05"
-      ></div>
-
       <!-- Main content -->
       <div class="relative z-10 max-w-3xl">
         <h1
@@ -39,21 +33,6 @@
             Koop Tickets
           </NuxtLink>
         </div>
-      </div>
-
-      <!-- Decorative SVG shape (optional) -->
-      <div class="absolute bottom-0 w-full">
-        <svg
-          class="w-full"
-          viewBox="0 0 1440 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill="white"
-            d="M0,64 C480,160 960,0 1440,96 L1440,320 L0,320 Z"
-          ></path>
-        </svg>
       </div>
     </section>
 
