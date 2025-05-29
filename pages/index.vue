@@ -81,14 +81,68 @@
     </section>
 
     <!-- About Section -->
-    <section class="bg-gray-100 py-20 px-4 text-center">
-      <div class="max-w-screen-md mx-auto">
-        <h2 class="text-3xl font-bold mb-4">Wat is ❤️U Festival?</h2>
-        <p class="text-lg text-gray-700">
-          Een tweedaagse viering van menselijkheid, natuur, kunst en verbinding.
-          We brengen mensen samen die geloven in een mooiere toekomst — met
-          muziek, liefde, en actie.
-        </p>
+    <section
+      class="relative bg-white dark:bg-zinc-900 py-24 px-6 overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-pink-100/50 to-red-200/30 dark:from-zinc-800 dark:to-zinc-700 blur-2xl opacity-20 pointer-events-none"
+      ></div>
+
+      <div class="max-w-5xl mx-auto text-center space-y-12 relative z-10">
+        <!-- Header -->
+        <div>
+          <h2
+            class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4"
+          >
+            Wat is ❤️U Festival?
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-zinc-300 max-w-2xl mx-auto">
+            Een viering van menselijkheid, natuur, kunst en verbinding —
+            speciaal voor Utrechtse studenten. Hier ontstaat magie wanneer
+            vreemden vrienden worden, muziek je hart raakt, en idealen
+            werkelijkheid worden.
+          </p>
+        </div>
+
+        <!-- Grid of Value Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          <div
+            class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">🌿 Natuur & Ruimte</h3>
+            <p class="text-gray-600 dark:text-zinc-300">
+              Onze locatie is groen, open en vrij. Ontsnap even aan de stad,
+              adem frisse lucht, en voel je verbonden met de aarde.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">🎶 Muziek & Expressie</h3>
+            <p class="text-gray-600 dark:text-zinc-300">
+              Laat je verrassen door lokale bands, DJ’s en spoken word. Of doe
+              zelf mee in open mic sessies en dansvloeren.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">🤝 Verbinding & Liefde</h3>
+            <p class="text-gray-600 dark:text-zinc-300">
+              Nieuwe stad? Nieuwe mensen? ❤️U is dé plek om vrienden te maken,
+              relaties op te bouwen en jezelf te zijn.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-md hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">🔥 Actie & Toekomst</h3>
+            <p class="text-gray-600 dark:text-zinc-300">
+              Workshops, initiatieven en projecten — samen bouwen we aan een
+              toekomst vol hoop, duurzaamheid en solidariteit.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 

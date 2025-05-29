@@ -48,9 +48,15 @@ const toggleDarkMode = () => {
           <NuxtLink to="/qr" class="nav-link">QR Scan</NuxtLink>
           <button
             @click="toggleDarkMode"
-            class="ml-2 transition-opacity hover:opacity-80"
+            class="relative w-14 h-8 flex items-center bg-gray-300 dark:bg-zinc-700 rounded-full p-1 transition-colors duration-300"
+            aria-label="Toggle dark mode"
           >
-            {{ isDark ? "🌙" : "💡" }}
+            <div
+              class="w-6 h-6 bg-white dark:bg-zinc-300 rounded-full shadow-md transform transition-transform duration-300"
+              :class="{ 'translate-x-6': isDark, 'translate-x-0': !isDark }"
+            ></div>
+            <span class="absolute left-1.5 text-xs" v-if="!isDark">🌞</span>
+            <span class="absolute right-1.5 text-xs" v-if="isDark">🌝</span>
           </button>
         </nav>
       </div>
