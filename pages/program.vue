@@ -1,54 +1,68 @@
 <template>
-  <div class="max-w-screen-md mx-auto px-4 py-8">
-    <h2 class="text-3xl font-bold mb-6">Festival Tijdlijn</h2>
+  <div class="max-w-screen-xl mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6">Festival Programma</h2>
 
-    <!-- Day Selector Buttons -->
-    <div class="flex space-x-4 mb-6">
-      <button
-        class="px-4 py-2 rounded font-semibold"
-        :class="
-          currentDay === 'saturday'
-            ? 'bg-red-600 text-white'
-            : 'bg-gray-200 text-gray-800'
-        "
-        @click="currentDay = 'saturday'"
-      >
-        Zaterdag
-      </button>
-      <button
-        class="px-4 py-2 rounded font-semibold"
-        :class="
-          currentDay === 'sunday'
-            ? 'bg-red-600 text-white'
-            : 'bg-gray-200 text-gray-800'
-        "
-        @click="currentDay = 'sunday'"
-      >
-        Zondag
-      </button>
-    </div>
-
-    <!-- Timeline -->
-    <div class="relative border-l-4 border-gray-300">
+    <!-- Time Block Grid -->
+    <div class="overflow-x-auto relative">
       <div
-        v-for="(event, index) in schedule[currentDay]"
-        :key="index"
-        class="mb-10 ml-6"
+        class="grid border border-gray-300 relative"
+        :style="{ gridTemplateColumns: 'repeat(57, minmax(30px, 1fr))' }"
       >
-        <span
-          class="absolute -left-3 top-0 w-6 h-6 rounded-full border-4 border-white"
-          :class="event.color"
-        ></span>
-        <div :class="['p-4 rounded-lg shadow-md', event.color]">
-          <h3 class="text-lg font-semibold text-white">{{ event.title }}</h3>
-          <p class="text-sm text-white/80 mb-2">{{ event.time }}</p>
-          <p class="text-sm text-white">{{ event.description }}</p>
-          <span
-            class="inline-block mt-2 text-xs uppercase bg-white/30 text-white px-2 py-1 rounded"
-          >
-            {{ event.category }}
-          </span>
+        <!-- Top-left empty cell -->
+        <div
+          class="bg-white border-r border-gray-300 sticky left-0 z-10 row-span-1"
+        ></div>
+        <!-- Time labels -->
+        <div
+          v-for="(slot, i) in timeSlots"
+          :key="'time-' + i"
+          class="text-xs text-center py-2 border-r border-b border-gray-200 bg-gray-100"
+        >
+          {{ slot }}
         </div>
+
+        <!-- Both Days -->
+        <template v-for="(day, dayIndex) in ['saturday', 'sunday']">
+          <template v-for="(stage, stageIndex) in stages">
+            <!-- Sticky Stage Label -->
+            <div
+              class="bg-gray-100 font-semibold text-sm text-right pr-2 border-r border-b border-gray-300 sticky left-0 z-10 flex items-center justify-between"
+            >
+              <span>{{ stage }}</span>
+              <!-- Only show day label once per group of 4 stages -->
+              <span
+                v-if="stageIndex === 0"
+                class="ml-2 text-xs font-bold text-gray-500"
+              >
+                {{ day === "saturday" ? "Zaterdag" : "Zondag" }}
+              </span>
+            </div>
+
+            <!-- Time slots grid -->
+            <div
+              v-for="i in 56"
+              :key="'cell-' + day + '-' + stageIndex + '-' + i"
+              class="border-r border-b border-gray-100 h-10"
+            ></div>
+
+            <!-- Events -->
+            <template
+              v-for="(event, index) in schedule[day].filter(
+                (e) => e.stage === stage
+              )"
+            >
+              <div
+                class="absolute text-xs text-white p-1 rounded shadow-sm"
+                :class="event.color"
+                :style="getBlockStyle(event, dayIndex, stage)"
+              >
+                <strong>{{ event.title }}</strong
+                ><br />
+                <span>{{ event.time }}</span>
+              </div>
+            </template>
+          </template>
+        </template>
       </div>
     </div>
   </div>
@@ -57,54 +71,96 @@
 <script setup>
 import { ref } from "vue";
 
-const currentDay = ref("saturday");
+const stages = ["Poton", "The Lake", "The Club", "Hanggar"];
+
+const timeSlots = [];
+for (let h = 10; h <= 23; h++) {
+  for (let m of ["00", "15", "30", "45"]) {
+    timeSlots.push(`${String(h).padStart(2, "0")}:${m}`);
+  }
+}
+
+const getTimeIndex = (time) => {
+  const [h, m] = time.split(":").map(Number);
+  return (h - 10) * 4 + Math.floor(m / 15);
+};
+
+// Returns style adjusted for vertical offset based on day and stage
+const getBlockStyle = (event, dayIndex, stage) => {
+  const start = getTimeIndex(event.start);
+  const end = getTimeIndex(event.end);
+  const span = end - start;
+  const rowHeight = 40; // Each row is 40px high
+
+  // Compute top position: (dayIndex * stages.length + stageIndex) * rowHeight
+  const top =
+    (dayIndex * stages.length + stages.indexOf(stage)) * rowHeight + 40;
+
+  return {
+    gridColumnStart: start + 2,
+    gridColumnEnd: start + 2 + span,
+    top: `${top}px`,
+    left: `${(start + 1) * 30}px`,
+    width: `${span * 30}px`,
+    height: `${rowHeight - 2}px`,
+    position: "absolute",
+  };
+};
 
 const schedule = {
   saturday: [
     {
-      title: "Opening Ceremony",
-      time: "09:00 - 09:30",
-      description: "Welkomswoord en introductie van het festival",
-      category: "Ceremonie",
+      title: "Armin van Buuren",
+      start: "10:30",
+      end: "12:15",
+      stage: "Poton",
       color: "bg-red-500",
+      time: "10:30 - 12:15",
     },
     {
-      title: "Live DJ Set",
-      time: "10:00 - 11:30",
-      description: "Dans mee op beats van onze huis-DJ",
-      category: "Muziek",
-      color: "bg-pink-500",
-    },
-    {
-      title: "Yoga Workshop",
-      time: "13:00 - 14:00",
-      description: "Rustige yogasessie voor alle niveaus",
-      category: "Workshop",
+      title: "Talent set 1",
+      start: "10:00",
+      end: "10:45",
+      stage: "The Lake",
       color: "bg-blue-500",
+      time: "10:00 - 10:45",
     },
+    {
+      title: "DJ set 1",
+      start: "10:00",
+      end: "11:00",
+      stage: "Hanggar",
+      color: "bg-green-500",
+      time: "10:00 - 11:00",
+    },
+    // Add more Saturday events as needed
   ],
   sunday: [
     {
-      title: "Climate Talk",
-      time: "10:00 - 11:00",
-      description: "Sprekers over duurzaamheid en de toekomst",
-      category: "Talks",
-      color: "bg-green-600",
-    },
-    {
-      title: "Street Food Market",
-      time: "12:00 - 14:00",
-      description: "Ontdek lokale foodtrucks en snacks",
-      category: "Eten",
-      color: "bg-yellow-500",
-    },
-    {
-      title: "Closing Concert",
-      time: "17:00 - 19:00",
-      description: "Avondoptreden om het festival af te sluiten",
-      category: "Muziek",
+      title: "Martin Garrix",
+      start: "10:30",
+      end: "12:15",
+      stage: "Poton",
       color: "bg-purple-600",
+      time: "10:30 - 12:15",
     },
+    {
+      title: "Talent set 1",
+      start: "10:00",
+      end: "10:45",
+      stage: "The Lake",
+      color: "bg-blue-500",
+      time: "10:00 - 10:45",
+    },
+    {
+      title: "DJ set 1",
+      start: "10:00",
+      end: "11:00",
+      stage: "Hanggar",
+      color: "bg-green-500",
+      time: "10:00 - 11:00",
+    },
+    // Add more Sunday events as needed
   ],
 };
 </script>

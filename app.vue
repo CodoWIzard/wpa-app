@@ -62,11 +62,6 @@ const toggleDarkMode = () => {
       </div>
     </header>
 
-    <!-- Nav -->
-    <nav
-      class="bg-white dark:bg-gray-800 border-b-4 border-gray-200 dark:border-gray-700"
-    ></nav>
-
     <!-- Main content -->
     <main class="flex-1">
       <NuxtPage />

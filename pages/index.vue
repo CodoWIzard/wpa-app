@@ -38,23 +38,23 @@
 
     <!-- Features Section -->
     <section class="py-20 bg-white text-gray-800 px-4">
-      <div
-        class="max-w-screen-xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8"
-      >
-        <div class="p-6 border rounded shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-bold mb-2">🎶 Muziek</h3>
-          <p>
-            Live optredens, DJ-sets, jamsessies — laat je gaan op de beats van
-            de liefde.
+      <div class="max-w-screen-xl mx-auto">
+        <div class="mb-8 text-center">
+          <h2 class="text-3xl font-bold mb-4">Festival Sfeerimpressie 🎥</h2>
+          <p class="text-lg text-gray-600">
+            Krijg alvast een voorproefje van de vibes, muziek en verbondenheid
+            die je kunt verwachten.
           </p>
         </div>
-        <div class="p-6 border rounded shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-bold mb-2">🧘 Workshops</h3>
-          <p>Van yoga tot duurzame kunst: verrijk jezelf op alle niveaus.</p>
-        </div>
-        <div class="p-6 border rounded shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-bold mb-2">🌍 Talks & Klimaat</h3>
-          <p>Vooraanstaande denkers over toekomst, zorg en verbondenheid.</p>
+        <div class="rounded-xl overflow-hidden shadow-lg h-[600px]">
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            title="Festival Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section>
