@@ -1,7 +1,6 @@
 export default defineNuxtConfig({
   modules: ["@vite-pwa/nuxt", "@nuxtjs/color-mode", "@nuxtjs/tailwindcss"],
 
-  // PWA module config
   pwa: {
     registerType: "autoUpdate",
     includeAssets: [
@@ -16,7 +15,7 @@ export default defineNuxtConfig({
       start_url: "/",
       display: "standalone",
       background_color: "#ffffff",
-      theme_color: "#4a90e2",
+      theme_color: "#000000",
       icons: [
         {
           src: "/icons/icon-192x192.png",
