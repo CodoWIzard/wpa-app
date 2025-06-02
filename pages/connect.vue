@@ -34,6 +34,18 @@
               Zaterdag 6 september 2025 — 12:00 tot 23:00
             </InfoRow>
           </div>
+          <div class="my-12 max-w-screen-xl mx-auto px-4">
+            <div class="rounded-xl overflow-hidden shadow-lg h-[500px]">
+              <iframe
+                class="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.384765574148!2d5.059985715799991!3d52.074425179735444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66629b4f556ff%3A0x2b0ab4632ac24451!2sStrijkviertel%2C%20De%20Meern!5e0!3m2!1snl!2snl!4v1717320000000!5m2!1snl!2snl"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
         </InfoCard>
 
         <!-- Bereikbaarheid -->
@@ -64,21 +76,6 @@
             ❤️U Festival”.
           </InfoRow>
         </InfoCard>
-
-        <!-- Locatie / Google Maps Embed -->
-        <div class="my-12 max-w-screen-xl mx-auto px-4">
-          <h3 class="text-2xl font-bold mb-4">📍 Locatie</h3>
-          <div class="rounded-xl overflow-hidden shadow-lg h-[500px]">
-            <iframe
-              class="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.384765574148!2d5.059985715799991!3d52.074425179735444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c66629b4f556ff%3A0x2b0ab4632ac24451!2sStrijkviertel%2C%20De%20Meern!5e0!3m2!1snl!2snl!4v1717320000000!5m2!1snl!2snl"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
 
         <!-- Lockers -->
         <InfoCard icon="🔒" title="Lockers">
