@@ -27,7 +27,7 @@
             Bekijk Programma
           </NuxtLink>
           <NuxtLink
-            to="/tickets"
+            to=""
             class="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-600 transition shadow"
           >
             Koop Tickets
@@ -133,7 +133,7 @@
         <h2 class="text-3xl font-bold mb-4">Sluit je aan bij de beweging ❤️</h2>
         <p class="mb-6">15 & 16 augustus 2026 in het hart van Utrecht</p>
         <NuxtLink
-          to="/tickets"
+          to=""
           class="bg-white text-red-600 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition"
         >
           Bestel je Tickets
