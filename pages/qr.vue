@@ -8,7 +8,11 @@
     </h1>
 
     <p class="text-gray-400 mb-8 text-lg animate-fade-in-up delay-100">
-      Install or open the PWA on your phone
+      Installatie insctructie:<br />
+      Scan de QR-code met je telefoon of tablet om de app te openen.<br />
+      Klik op de share knop en scroll naar onder om de app als bladwijzer te
+      zetten in je telefoon.<br />
+      Open de app en geniet van de festival!
     </p>
 
     <!-- QR Code with animated hover effect -->

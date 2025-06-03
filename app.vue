@@ -62,9 +62,9 @@ const toggleDarkMode = () => {
           class="flex flex-wrap justify-center sm:justify-end gap-3 text-sm font-medium"
         >
           <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-          <NuxtLink to="/program" class="nav-link">Programme</NuxtLink>
-          <NuxtLink to="/map" class="nav-link">Map</NuxtLink>
-          <NuxtLink to="/connect" class="nav-link">Information</NuxtLink>
+          <NuxtLink to="/program" class="nav-link">Programma</NuxtLink>
+          <NuxtLink to="/map" class="nav-link">Kaart</NuxtLink>
+          <NuxtLink to="/connect" class="nav-link">Informatie</NuxtLink>
           <NuxtLink to="/qr" class="nav-link">QR Scan</NuxtLink>
           <button
             @click="toggleDarkMode"

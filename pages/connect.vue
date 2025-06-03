@@ -22,8 +22,8 @@
         <!-- Algemeen & Contact -->
         <InfoCard icon="📍" title="Algemeen & Contact">
           <p>
-            Het ❤️U Festival is voor (nieuwe) studenten in de regio Utrecht en
-            is een aanvulling op UIT.
+            Het festival is voor (nieuwe) studenten in de regio Utrecht en is
+            een aanvulling op UIT.
           </p>
           <div class="mt-4 space-y-2">
             <InfoRow label="📌 Adres">
@@ -31,7 +31,7 @@
               Navigatieadres: Strijkviertelweg, Utrecht
             </InfoRow>
             <InfoRow label="🗓️ Datum & Tijd">
-              Zaterdag 6 september 2025 — 12:00 tot 23:00
+              15 & 16 augustus — 12:00 tot 23:00
             </InfoRow>
           </div>
           <div class="my-12 max-w-screen-xl mx-auto px-4">
@@ -113,11 +113,7 @@
   </main>
 </template>
 
-<script setup>
-// Components will be defined below
-</script>
-
-<!-- Reusable InfoCard & Row -->
+<!-- InfoCard & Row -->
 <script>
 export default {
   components: {

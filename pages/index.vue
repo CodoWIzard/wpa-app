@@ -12,7 +12,7 @@
           ❤️U Festival
         </h1>
         <p class="text-base sm:text-xl mb-2 italic text-red-100">
-          “Vier de liefde, kunst & duurzaamheid”
+          “Vier de liefde, kunst & wetenschap”
         </p>
         <p class="text-base sm:text-lg mb-6">
           Utrecht · 15 & 16 augustus 2026 · Stad & Natuur
@@ -40,7 +40,7 @@
     <section class="py-20 bg-white text-gray-800 px-4 animate-fade-in-up">
       <div class="max-w-screen-xl mx-auto">
         <div class="mb-8 text-center">
-          <h2 class="text-3xl font-bold mb-4">Festival Sfeerimpressie 🎥</h2>
+          <h2 class="text-3xl font-bold mb-4">Festival Sfeerimpressie</h2>
           <p class="text-lg text-gray-600">
             Krijg alvast een voorproefje van de vibes, muziek en verbondenheid
             die je kunt verwachten.
@@ -76,10 +76,10 @@
             Wat is ❤️U Festival?
           </h2>
           <p class="text-lg text-gray-700 dark:text-zinc-300 max-w-2xl mx-auto">
-            Een viering van menselijkheid, natuur, kunst en verbinding —
-            speciaal voor Utrechtse studenten. Hier ontstaat magie wanneer
-            vreemden vrienden worden, muziek je hart raakt, en idealen
-            werkelijkheid worden.
+            Een viering van wetenschap, natuur, kunst en verbinding — speciaal
+            voor Utrechtse studenten. Hier ontstaat magie wanneer vreemden
+            vrienden worden, muziek je hart raakt, en idealen werkelijkheid
+            worden.
           </p>
         </div>
 
@@ -91,7 +91,7 @@
             <h3 class="text-xl font-semibold mb-2">🌿 Natuur & Ruimte</h3>
             <p class="text-gray-600 dark:text-zinc-300">
               Onze locatie is groen, open en vrij. Ontsnap even aan de stad,
-              adem frisse lucht, en voel je verbonden met de aarde.
+              adem frisse lucht, en ontdek de activiteiten!
             </p>
           </div>
           <div
@@ -99,7 +99,7 @@
           >
             <h3 class="text-xl font-semibold mb-2">🎶 Muziek & Expressie</h3>
             <p class="text-gray-600 dark:text-zinc-300">
-              Laat je verrassen door lokale bands, DJ’s en spoken word. Of doe
+              Laat je verrassen door bekende bands, DJ’s en spoken word. Of doe
               zelf mee in open mic sessies en dansvloeren.
             </p>
           </div>
@@ -108,7 +108,7 @@
           >
             <h3 class="text-xl font-semibold mb-2">🤝 Verbinding & Liefde</h3>
             <p class="text-gray-600 dark:text-zinc-300">
-              Nieuwe stad? Nieuwe mensen? ❤️U is dé plek om vrienden te maken,
+              Nieuwe stad? Nieuwe mensen! ❤️U is dé plek om vrienden te maken,
               relaties op te bouwen en jezelf te zijn.
             </p>
           </div>
@@ -117,7 +117,7 @@
           >
             <h3 class="text-xl font-semibold mb-2">🔥 Actie & Toekomst</h3>
             <p class="text-gray-600 dark:text-zinc-300">
-              Workshops, initiatieven en projecten — samen bouwen we aan een
+              Workshops, innovaties en projecten — samen bouwen we aan een
               toekomst vol hoop, duurzaamheid en solidariteit.
             </p>
           </div>
