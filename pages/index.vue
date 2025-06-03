@@ -5,7 +5,7 @@
       class="relative overflow-hidden bg-gradient-to-br from-red-600 via-pink-500 to-red-700 text-white min-h-screen flex items-center justify-center text-center px-4 py-20"
     >
       <!-- Main content -->
-      <div class="relative z-10 max-w-3xl">
+      <div class="relative z-10 max-w-3xl animate-fade-in-up">
         <h1
           class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg"
         >
@@ -37,7 +37,7 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 bg-white text-gray-800 px-4">
+    <section class="py-20 bg-white text-gray-800 px-4 animate-fade-in-up">
       <div class="max-w-screen-xl mx-auto">
         <div class="mb-8 text-center">
           <h2 class="text-3xl font-bold mb-4">Festival Sfeerimpressie 🎥</h2>
