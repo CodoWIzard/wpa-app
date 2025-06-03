@@ -1,5 +1,13 @@
 export default defineNuxtConfig({
+  ssr: false,
+
   modules: ["@vite-pwa/nuxt", "@nuxtjs/color-mode", "@nuxtjs/tailwindcss"],
+
+  nitro: {
+    prerender: {
+      routes: ["/"], // Make sure / is pre-rendered
+    },
+  },
 
   pwa: {
     registerType: "autoUpdate",
@@ -7,6 +15,7 @@ export default defineNuxtConfig({
       "favicon.ico",
       "apple-touch-icon.png",
       "icons/icon-512x512.png",
+      "offline.html", // Add offline page to be cached
     ],
     manifest: {
       name: "My Nuxt PWA",
@@ -30,7 +39,7 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      navigateFallback: "/",
+      navigateFallback: "/offline.html", // Fallback if page isn't cached
       globPatterns: ["**/*.{js,css,html,ico,png,svg,json,webp}"],
       runtimeCaching: [
         {
