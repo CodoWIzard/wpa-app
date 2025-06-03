@@ -6,7 +6,7 @@
       @mouseleave="pause = false"
       :class="{ 'animation-pause': pause }"
     >
-      <!-- duplicate list for seamless loop -->
+      <!-- dupe voor seamless loop -->
       <div
         v-for="(artist, index) in loopedArtists"
         :key="index"

@@ -48,7 +48,7 @@
         <div class="rounded-xl overflow-hidden shadow-lg h-[600px]">
           <iframe
             class="w-full h-full"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            src="https://www.youtube.com/embed/nogGeenVid"
             title="Festival Video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -127,7 +127,7 @@
     <section>
       <div>
         <ArtistCarousel />
-        <!-- Other homepage content -->
+        <!-- ander homepage content -->
       </div>
     </section>
 

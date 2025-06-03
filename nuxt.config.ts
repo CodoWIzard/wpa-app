@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ["/"], // Make sure / is pre-rendered
+      routes: ["/"], // pre rendering routes
     },
   },
 
@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       "favicon.ico",
       "apple-touch-icon.png",
       "icons/icon-512x512.png",
-      "offline.html", // Add offline page to be cached
+      "offline.html", // offline site for fallback
     ],
     manifest: {
       name: "My Nuxt PWA",
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      navigateFallback: "/offline.html", // Fallback if page isn't cached
+      navigateFallback: "/offline.html", // for fallback when not properly cached
       globPatterns: ["**/*.{js,css,html,ico,png,svg,json,webp}"],
       runtimeCaching: [
         {
