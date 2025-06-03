@@ -4,7 +4,6 @@
     <section
       class="relative overflow-hidden bg-gradient-to-br from-red-600 via-pink-500 to-red-700 text-white min-h-screen flex items-center justify-center text-center px-4 py-20"
     >
-      <!-- Main content -->
       <div class="relative z-10 max-w-3xl animate-fade-in-up">
         <h1
           class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg"
@@ -36,7 +35,7 @@
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- impressie Section -->
     <section class="py-20 bg-white text-gray-800 px-4 animate-fade-in-up">
       <div class="max-w-screen-xl mx-auto">
         <div class="mb-8 text-center">
@@ -83,7 +82,7 @@
           </p>
         </div>
 
-        <!-- Grid of Value Pillars -->
+        <!-- zwarte grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
           <div
             class="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-md hover:shadow-lg transition"
@@ -125,7 +124,18 @@
       </div>
     </section>
 
-    <!-- Call To Action -->
+    <section>
+      <div>
+        <ArtistCarousel />
+        <!-- Other homepage content -->
+      </div>
+    </section>
+
+    <script setup>
+      import ArtistCarousel from "@/components/artistCarousel.vue";
+    </script>
+
+    <!-- sluit je aan -->
     <section
       class="relative overflow-hidden bg-gradient-to-br from-red-600 via-pink-500 to-red-700 text-white flex items-center justify-center text-center px-4 py-20"
     >

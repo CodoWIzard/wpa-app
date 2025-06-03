@@ -14,7 +14,7 @@ useHead({
   link: [{ rel: "manifest", href: "/manifest.webmanifest" }],
 });
 
-// mode
+// switch modus
 const colorMode = useColorMode();
 const isDark = computed(() => colorMode.value === "dark");
 const toggleDarkMode = () => {
@@ -82,7 +82,7 @@ const toggleDarkMode = () => {
       </div>
     </header>
 
-    <!-- Main content -->
+    <!-- Main content? vergeten wat dit was -->
     <main class="flex-1">
       <NuxtPage />
     </main>

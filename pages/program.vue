@@ -137,7 +137,7 @@ const schedule = {
       stage: "Hanggar",
       time: "10:00 - 11:00",
     },
-    // Add more Saturday events
+    // meer toevoegen als ik wil
   ],
   sunday: [
     {
@@ -161,7 +161,7 @@ const schedule = {
       stage: "Hanggar",
       time: "10:00 - 11:00",
     },
-    // Add more Sunday events
+    // meer toevoegen zondag
   ],
 };
 
@@ -171,7 +171,7 @@ const filteredEvents = (day, stage) => {
 </script>
 
 <style>
-/* Optional: Tailwind's scrollbar utility requires this */
+/* scroll bar */
 .scrollbar-thin {
   scrollbar-width: thin;
 }

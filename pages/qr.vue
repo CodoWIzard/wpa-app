@@ -2,7 +2,7 @@
   <section
     class="min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 bg-zinc-900 text-white"
   >
-    <!-- Header with subtle animation -->
+    <!-- header met anim -->
     <h1 class="text-4xl sm:text-5xl font-bold mb-4 animate-fade-in-up">
       Scan to Use the Festival App
     </h1>
@@ -15,7 +15,7 @@
       Open de app en geniet van de festival!
     </p>
 
-    <!-- QR Code with animated hover effect -->
+    <!-- QR Code hover effecr -->
     <div
       class="relative group transition-transform duration-300 hover:scale-105"
     >
@@ -30,7 +30,7 @@
       ></div>
     </div>
 
-    <!-- App URL with subtle copy-to-clipboard interaction -->
+    <!-- url copy interactie -->
     <p
       @click="copyUrl"
       class="mt-6 text-sm text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer flex items-center gap-2 animate-fade-in-up delay-200"
