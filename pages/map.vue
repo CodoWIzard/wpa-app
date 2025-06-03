@@ -13,7 +13,7 @@
     </div>
   </section>
 </template>
-
+<!---
 <script setup>
 import { onMounted } from "vue";
 import panzoom from "@panzoom/panzoom";
@@ -31,3 +31,4 @@ onMounted(() => {
   });
 });
 </script>
+-->

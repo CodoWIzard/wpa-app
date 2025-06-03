@@ -31,7 +31,39 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: "/",
-      globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+      globPatterns: ["**/*.{js,css,html,ico,png,svg,json,webp}"],
+      runtimeCaching: [
+        {
+          urlPattern: ({ request }) => request.destination === "document",
+          handler: "NetworkFirst",
+          options: {
+            cacheName: "pages-cache",
+          },
+        },
+        {
+          urlPattern: ({ request }) => request.destination === "image",
+          handler: "CacheFirst",
+          options: {
+            cacheName: "images-cache",
+            expiration: {
+              maxEntries: 60,
+              maxAgeSeconds: 30 * 24 * 60 * 60,
+            },
+          },
+        },
+        {
+          urlPattern: ({ request }) =>
+            ["style", "script", "worker"].includes(request.destination),
+          handler: "StaleWhileRevalidate",
+          options: {
+            cacheName: "assets-cache",
+            expiration: {
+              maxEntries: 60,
+              maxAgeSeconds: 30 * 24 * 60 * 60,
+            },
+          },
+        },
+      ],
     },
   },
 });
