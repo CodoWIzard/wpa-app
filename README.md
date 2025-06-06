@@ -57,6 +57,13 @@ Best option for local production build:
 ## Deployment
 Deployed on Vercel. You can also copy the project and deploy it elsewhere.
 
+## Deployment mobile
+1. Use the URL or QR code to reach the website.
+2. Make sure to open and use all pages
+3. On your phone, tap on a "share" button
+4. Bookmark the website on your phone as an application.
+5. You're ready and set to make use of the app! It's automatically configured to work offline as well. Note that embeds do not work offline automatically.
+
 ## Configuration:
 nuxt.config.ts
 ```bash
