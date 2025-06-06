@@ -1,7 +1,7 @@
 # Love You Festival PWA
 
 ## Demo
-....
+`https://wpa-app.vercel.app/qr`:
 ## Setup
 
 Dependencies:
