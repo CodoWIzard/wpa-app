@@ -1,34 +1,46 @@
 <template>
-  <div class="overflow-hidden whitespace-nowrap py-6 bg-gray-100 dark:bg-white">
-    <div
-      class="flex gap-10 px-4 animate-scroll"
-      @mouseover="pause = true"
-      @mouseleave="pause = false"
-      :class="{ 'animation-pause': pause }"
+  <div class="bg-gray-50 dark:bg-neutral-900 py-12 px-6">
+    <h2
+      class="text-2xl font-bold text-center text-gray-800 dark:text-white mb-10"
     >
-      <!-- dupe voor seamless loop -->
+      Featured Artists
+    </h2>
+
+    <div
+      class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto"
+    >
       <div
-        v-for="(artist, index) in loopedArtists"
+        v-for="(artist, index) in artists"
         :key="index"
-        class="flex-shrink-0"
+        class="group relative overflow-hidden rounded-2xl shadow-lg transition hover:shadow-2xl"
       >
-        <a :href="artist.youtube" target="_blank" rel="noopener noreferrer">
-          <img
-            :src="artist.image"
-            :alt="artist.name"
-            class="h-28 w-28 md:h-32 md:w-32 rounded-full object-cover transition-transform duration-300 hover:scale-125"
-          />
-        </a>
+        <!-- Artist Image -->
+        <img
+          :src="artist.image"
+          :alt="artist.name"
+          class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <!-- Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-4"
+        >
+          <h3 class="text-lg font-semibold text-white">{{ artist.name }}</h3>
+          <a
+            :href="artist.youtube"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 inline-block text-sm text-white/90 hover:text-white"
+          >
+            🎵 Watch on YouTube
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
-
-const pause = ref(false);
-
 const artists = [
   {
     name: "Artist One",
@@ -41,69 +53,34 @@ const artists = [
     youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
   },
   {
-    name: "Artist Three",
+    name: "Beard Guy",
     image: "/beard.webp",
     youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
   },
   {
-    name: "Artist Three",
-    image: "longHair.webp",
+    name: "Long Hair",
+    image: "/longHair.webp",
     youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
   },
   {
-    name: "Artist Three",
-    image: "tee.webp",
+    name: "Tee",
+    image: "/tee.webp",
     youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
   },
   {
-    name: "Artist Three",
-    image: "sigma.webp",
+    name: "Sigma",
+    image: "/sigma.webp",
     youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
   },
   {
-    name: "Artist Three",
-    image: "electric.webp",
+    name: "Electric",
+    image: "/electric.webp",
     youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
   },
   {
-    name: "Artist Three",
-    image: "city.webp",
-    youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
-  },
-  {
-    name: "Artist Three",
-    image: "suitMen.webp",
-    youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
-  },
-  {
-    name: "Artist Three",
-    image: "sittingFloor.webp",
-    youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
-  },
-  {
-    name: "Artist Three",
-    image: "triangle.webp",
+    name: "City",
+    image: "/city.webp",
     youtube: "https://www.youtube.com/watch?v=FE4VcAXxXfM",
   },
 ];
-const loopedArtists = computed(() => [...artists, ...artists]);
 </script>
-
-<style scoped>
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll {
-  animation: scroll 30s linear infinite;
-}
-
-.animation-pause {
-  animation-play-state: paused;
-}
-</style>

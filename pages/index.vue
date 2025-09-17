@@ -26,10 +26,10 @@
             Bekijk Programma
           </NuxtLink>
           <NuxtLink
-            to=""
+            to="/qr"
             class="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-red-600 transition shadow"
           >
-            Koop Tickets
+            Scan de QR code
           </NuxtLink>
         </div>
       </div>
@@ -131,10 +131,6 @@
       </div>
     </section>
 
-    <script setup>
-      import ArtistCarousel from "@/components/artistCarousel.vue";
-    </script>
-
     <!-- sluit je aan -->
     <section
       class="relative overflow-hidden bg-gradient-to-br from-red-600 via-pink-500 to-red-700 text-white flex items-center justify-center text-center px-4 py-20"
@@ -143,12 +139,16 @@
         <h2 class="text-3xl font-bold mb-4">Sluit je aan bij de beweging ❤️</h2>
         <p class="mb-6">15 & 16 augustus 2026 in het hart van Utrecht</p>
         <NuxtLink
-          to=""
+          to="/qr"
           class="bg-white text-red-600 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition"
         >
-          Bestel je Tickets
+          Deel de beweging met je vrienden!
         </NuxtLink>
       </div>
     </section>
   </main>
 </template>
+
+<script setup>
+import ArtistCarousel from "@/components/artistCarousel.vue";
+</script>
